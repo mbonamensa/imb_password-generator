@@ -1,0 +1,158 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
+
+/* Root styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;;
+}
+
+:root {
+    --small-margin: 10px 20px;
+    --big-margin: 30px 50px;
+    --center-margin: 0 auto;
+    --small-padding: 15px 20px;
+    --big-padding: 70px 40px;
+}
+
+body {
+    background-image: url("../img/bg-img.jpg");
+}
+
+p {
+    color: #D5D4D8;
+}
+
+hr {
+    border: 1px solid lightgray;
+    opacity: 0.1;
+}
+
+
+/* Main */
+main {
+    display: flex;
+    align-items: center;
+    max-width: 450px;
+    min-width: 200px;
+    max-height: 750px;
+    min-height: 300px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #1F2937;
+    color: #ffffff;
+    margin: var(--center-margin);
+    padding: var(--big-padding);
+    box-shadow:  0 4px 8px 0 #0003, 0 6px 20px 0 #00000030;
+}
+
+.main-container {
+    width: 100%;
+    background: #1F2937;
+    color: #ffffff;
+}
+
+
+/* Heading */
+.heading-container {
+    margin-bottom: 50px;
+}
+
+#heading-color-chg {
+    color: #7DD3FC;
+    display: block;
+}
+
+
+/* Button */
+.btn-container {
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 10px;
+    color: #ffffff;
+    background-color: #0284C7;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    width: 150px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #036fa7;
+}
+
+button:active {
+    background-color: #035e8d;
+}
+
+
+/* Password */
+.pwd-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.passwords {
+    height: 32px;
+    border-radius: 5px;
+    background-color: #273549;
+    color: #0EA5E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    margin: 10px 0;
+    font-size: 13px ;
+}
+
+#clk-to-cpy {
+    margin: 0 auto;
+    padding: 15px;
+    color: #788a9b;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 560px) {
+    main {
+        width: 80%;
+    }
+
+    button {
+        width: 100%;
+    }
+    .pwd-container {
+        justify-content: center;
+    }
+
+    .passwords {
+        width: 100%;
+    }
+
+
+
+}
+
+@media screen and (max-width: 285px) {
+    main {
+        padding: var(--small-padding);
+    }
+}
+
