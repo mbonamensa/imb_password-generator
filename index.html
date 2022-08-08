@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Types</title>
+    <title>Password Generator</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <!-- CSS style sheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>JavaScript Data Types</h1>
 
-
-    <script type="text/javascript" src="index.js"></script>
+    <main>
+        <div class="main-container">
+            <div class="heading-container">
+                <h1>Generate a <span id="heading-color-chg">random password</span></h1>
+                <p>Never use an insecure password again.</p>
+            </div>
+            <div class="btn-container">
+                <button id="gen-password">Generate Passwords</button>
+            </div>
+            <hr>
+            <div class="pwd-container">
+                <div id="password-1" class="passwords"></div>
+                <div id="password-2" class="passwords"></div>
+                <span id="clk-to-cpy">Click password to copy</span>
+            </div>
+        </div>
+    </main>
+    <!-- Javascript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
