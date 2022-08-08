@@ -9,10 +9,13 @@ const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O",
 
 //Grab elements from HTML
 
-let genPassword   = document.querySelector("#gen-password")
-let password1     = document.querySelector("#password-1")
-let password2     = document.querySelector("#password-2")
-let copytext      = document.querySelector("#clk-to-cpy")
+const genPassword         = document.querySelector("#gen-password")
+const password1           = document.querySelector("#password-1")
+const password2           = document.querySelector("#password-2")
+const copytext            = document.querySelector("#clk-to-cpy")
+const passwordLengthRange = document.querySelector("#pwd-length-range")
+const passwordLengthNum   = document.querySelector(".pwd-length-num")
+
 
 
 //Function for generating passwords
@@ -21,9 +24,10 @@ function generatePassword() {
     //Set the password text variables as strings
     let passwordText1 = ""
     let passwordText2 = ""
+    let lengthInput = passwordLengthRange.value
 
     //loop through characters and add till charater length is 15
-    for (let i = 0; i < 15; i++ ) {
+    for (let i = 0; i < passwordLengthRange.value; i++ ) {
     let randomChar1 = characters[Math.floor(Math.random() * characters.length)]
     let randomChar2 = characters[Math.floor(Math.random() * characters.length)]
     passwordText1 += randomChar1
@@ -46,7 +50,7 @@ function generatePassword() {
 
 //Function for copying password
 
-function copyPassword(password) {
+function copyPassword(e) {
     //Create a textarea element
     const textarea = document.createElement('textarea')
 
@@ -58,7 +62,7 @@ function copyPassword(password) {
 
     //set its value to the contents of the password that has been generated
 
-    textarea.value = password.textContent
+    textarea.value = e.textContent
 
     //select the password
     textarea.select()
@@ -73,8 +77,36 @@ function copyPassword(password) {
     copytext.textContent = "Password Copied!"
 }
 
+//Function for input range/password length styling
+// function InputChanges(e) {
+//     let target = e.target
+//     if (e.target.type !== "range" ) {
+//         target = document.getElementById("pwd-length-range")
+//     }
+
+//     const min = target.min
+//     const max = target.max
+//     const val = target.value
+
+//     target.style.backgroundSize = (val - min) * 100 / (max - min) + "% 100%"
+
+// }
+
+function InputChanges(e) {
+    e = document.getElementById("pwd-length-range")
+    const min = e.min
+    const max = e.max
+    const val = e.value
+
+    e.style.backgroundSize = (val - min) * 100 / (max - min) + "% 100%"
+
+}
+
+
 
 // Event listeners
 genPassword.addEventListener("click", generatePassword)
 password1.addEventListener("click", () => {copyPassword(password1)})
 password2.addEventListener("click", () => {copyPassword(password2)})
+passwordLengthRange.addEventListener("input", InputChanges)
+// passwordLengthNum.addEventListener("input", InputChanges)

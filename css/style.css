@@ -68,6 +68,77 @@ main {
     display: block;
 }
 
+/* Password Length */
+
+.length-container {
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+.range-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #273549;
+    background-image: linear-gradient(#7DD3FC, #7DD3FC);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: 85%;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    /* background-color: #273549; */
+    background: transparent;
+    height: 3px;
+    border: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    background-color: #D5D4D8 ;
+    border-radius: 50%;
+    margin-top: -4.5px;
+    transition: background-color .3s ease-in-out;
+}
+
+input[type="range"]::-moz-range-track {
+    background-color: #273549;
+    height: 3px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    background-color: #D5D4D8 ;
+    border-radius: 50%;
+    margin-top: -4.5px;
+    border: none;
+}
+
+output[type="number"] {
+    background: #273549;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 /* Button */
 .btn-container {
@@ -143,6 +214,10 @@ button:active {
     }
 
     .passwords {
+        width: 100%;
+    }
+
+    .length-container {
         width: 100%;
     }
 
