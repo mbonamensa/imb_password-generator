@@ -1,2 +1,2 @@
 # Password Generator
-This repository is for my Password Generator solo project at Scrimba.
+Added a new feature where users can choose the length of the password by using a range input slider.
