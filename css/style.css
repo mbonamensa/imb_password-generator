@@ -1,7 +1,7 @@
-/* Font */
+/*** Font ***/
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
 
-/* Root styles */
+/*** Root styles ***/
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +31,7 @@ hr {
 }
 
 
-/* Main */
+/*** Main ***/
 main {
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@ main {
 }
 
 
-/* Heading */
+/*** Heading ***/
 .heading-container {
     margin-bottom: 50px;
 }
@@ -68,7 +68,7 @@ main {
     display: block;
 }
 
-/* Password Length */
+/*** Password Length ***/
 
 .length-container {
     margin-bottom: 30px;
@@ -81,6 +81,8 @@ main {
     justify-content: space-between;
     margin-top: 4px;
 }
+
+/*** Styling Password length range input ***/
 
 input[type="range"] {
     -webkit-appearance: none;
@@ -97,8 +99,8 @@ input[type="range"]:focus {
     outline: none;
 }
 
+/* Styling for Chrome, Safari, Opera, Edge */
 input[type="range"]::-webkit-slider-runnable-track {
-    /* background-color: #273549; */
     background: transparent;
     height: 3px;
     border: none;
@@ -114,6 +116,7 @@ input[type="range"]::-webkit-slider-thumb {
     transition: background-color .3s ease-in-out;
 }
 
+/* Styling for Firefox */
 input[type="range"]::-moz-range-track {
     background-color: #273549;
     height: 3px;
@@ -140,7 +143,7 @@ output[type="number"] {
 
 
 
-/* Button */
+/*** Button ***/
 .btn-container {
     margin-bottom: 30px;
 }
@@ -169,7 +172,7 @@ button:active {
 }
 
 
-/* Password */
+/*** Password ***/
 .pwd-container {
     display: flex;
     align-items: center;
@@ -200,7 +203,7 @@ button:active {
 }
 
 
-/* Media Queries */
+/*** Media Queries ***/
 @media screen and (max-width: 560px) {
     main {
         width: 80%;

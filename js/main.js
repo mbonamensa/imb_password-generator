@@ -26,15 +26,15 @@ function generatePassword() {
     let passwordText2 = ""
     let lengthInput = passwordLengthRange.value
 
-    //loop through characters and add till charater length is 15
+    //Loop through characters and add till charater length is user input value
     for (let i = 0; i < passwordLengthRange.value; i++ ) {
-    let randomChar1 = characters[Math.floor(Math.random() * characters.length)]
-    let randomChar2 = characters[Math.floor(Math.random() * characters.length)]
-    passwordText1 += randomChar1
-    passwordText2 += randomChar2
+        let randomChar1 = characters[Math.floor(Math.random() * characters.length)]
+        let randomChar2 = characters[Math.floor(Math.random() * characters.length)]
+        passwordText1 += randomChar1
+        passwordText2 += randomChar2
     }
 
-    //show the password on screen
+    //Show the password on screen
     password1.textContent = passwordText1
     password2.textContent = passwordText2
 
@@ -77,21 +77,6 @@ function copyPassword(e) {
     copytext.textContent = "Password Copied!"
 }
 
-//Function for input range/password length styling
-// function InputChanges(e) {
-//     let target = e.target
-//     if (e.target.type !== "range" ) {
-//         target = document.getElementById("pwd-length-range")
-//     }
-
-//     const min = target.min
-//     const max = target.max
-//     const val = target.value
-
-//     target.style.backgroundSize = (val - min) * 100 / (max - min) + "% 100%"
-
-// }
-
 function InputChanges(e) {
     e = document.getElementById("pwd-length-range")
     const min = e.min
@@ -109,4 +94,3 @@ genPassword.addEventListener("click", generatePassword)
 password1.addEventListener("click", () => {copyPassword(password1)})
 password2.addEventListener("click", () => {copyPassword(password2)})
 passwordLengthRange.addEventListener("input", InputChanges)
-// passwordLengthNum.addEventListener("input", InputChanges)
